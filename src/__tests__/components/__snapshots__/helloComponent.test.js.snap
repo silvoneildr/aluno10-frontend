@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloComponent should render component props correctly 1`] = `
+<styled.div>
+  <h1>
+    Olá
+  </h1>
+  <p>
+    Welcome: Wagner
+  </p>
+</styled.div>
+`;
+
+exports[`HelloComponent should render loading correctly 1`] = `
+<styled.div>
+  <h1 />
+  <p>
+    Carregando...
+  </p>
+</styled.div>
+`;
