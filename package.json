@@ -12,7 +12,8 @@
     "start": "webpack-dev-server --inline --progress --config build/webpack.dev.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "json-server": "node mock/server.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
