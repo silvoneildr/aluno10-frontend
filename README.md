@@ -2,8 +2,8 @@
 
 ### Description
 
-  > The project objetive consists to create in a tool to management classes of students.
-  > It is possible configure classes of students, create setu pof tests and generate reports about this tests.
+  > The project objetive consists to create a tool to management classes of students.
+  > It is possible configure classes of students, create setup of tests and generate reports about this tests.
 
 ### Prerequisites
 
