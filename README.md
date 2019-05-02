@@ -31,3 +31,8 @@
 ## License
 
  > This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+ 
+ ## Autors
+ 
+ >Silvonei: silvoneildr@gmail.com  
+ >Wagner: wagnerdutra1010@gmail.com
