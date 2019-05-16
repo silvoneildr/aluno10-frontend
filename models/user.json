@@ -1,0 +1,8 @@
+{
+	"id": "Number",
+	"name": "String",
+	"user": "String",
+	"password": "String",
+	"email": "String",
+	"dateBirthday": "Date - ISO format"
+}
