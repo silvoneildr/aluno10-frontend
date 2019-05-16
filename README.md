@@ -5,7 +5,7 @@
   > The project objetive consists to create a tool to management classes of students.
   > It is possible configure classes of students, create setup of tests and generate reports about this tests.
   >
-  > See more [Wiki](https://github.com/silvoneildr/aluno10/wiki)
+  > See [Wiki](https://github.com/silvoneildr/aluno10/wiki)
 
 ### Prerequisites
 
