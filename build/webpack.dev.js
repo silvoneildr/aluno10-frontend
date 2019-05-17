@@ -8,7 +8,8 @@ module.exports = merge(common, {
   output: {
     path: path.join(__dirname, '../dist'),
     filename: '[name].js',
-    chunkFilename: '[name].js'
+    chunkFilename: '[name].js',
+    publicPath: '/'
   },
   module: {
     rules: [
