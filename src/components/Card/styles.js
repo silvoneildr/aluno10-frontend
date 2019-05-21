@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const Card = styled.div`
+const Box = styled.div`
   padding: 20px;
   border-radius: 10px;
 `;
 
-export default Card;
+export default Box;
