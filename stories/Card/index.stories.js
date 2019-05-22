@@ -2,12 +2,20 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
+import { Wrapper } from '../index.stories';
+
 import Card from '../../src/components/Card';
 
-storiesOf('Components|Card', module).add('with text', () => <Card>Hello Button</Card>);
+storiesOf('Components|Card', module).add('with text', () => (
+  <Wrapper>
+    <Card>Hello Button</Card>
+  </Wrapper>
+));
 
 storiesOf('Components|Card', module).add('with p', () => (
-  <Card>
-    <p>Hello world</p>
-  </Card>
+  <Wrapper>
+    <Card>
+      <p>Hello world</p>
+    </Card>
+  </Wrapper>
 ));

@@ -1,9 +1,9 @@
 export default {
-  strongColor: '#052c4b',
-  primaryColor: '#4548fd',
-  secondaryColor: '#ffffff',
-  lightColor: '#dcdee091',
-  successColor: '#37da6b',
-  warningColor: '#f0d74d',
-  errorColor: '#f8562d'
+  strong: '#052c4b',
+  primary: '#4548fd',
+  secondary: '#ffffff',
+  light: '#dcdee091',
+  success: '#37da6b',
+  warning: '#f0d74d',
+  error: '#f8562d'
 };

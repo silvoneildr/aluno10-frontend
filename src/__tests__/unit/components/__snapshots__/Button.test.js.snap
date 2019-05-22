@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render button correctly 1`] = `
+.c0 {
+  width: 100px;
+  height: 50px;
+  color: white;
+  border-radius: 4px;
+}
+
+<Component
+  handleClick={[Function]}
+  theme={
+    Object {
+      "error": "#f8562d",
+      "light": "#dcdee091",
+      "primary": "#4548fd",
+      "secondary": "#ffffff",
+      "strong": "#052c4b",
+      "success": "#37da6b",
+      "warning": "#f0d74d",
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "
+  width: ",
+            [Function],
+            ";
+  height: ",
+            [Function],
+            ";
+  color: white;
+  border-radius: 4px;
+
+  ",
+            [Function],
+            "
+",
+          ],
+        },
+        "displayName": "styled.button",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "button",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    onClick={[Function]}
+    theme={
+      Object {
+        "error": "#f8562d",
+        "light": "#dcdee091",
+        "primary": "#4548fd",
+        "secondary": "#ffffff",
+        "strong": "#052c4b",
+        "success": "#37da6b",
+        "warning": "#f0d74d",
+      }
+    }
+  >
+    <button
+      className="c0"
+      onClick={[Function]}
+    >
+      Hello World
+    </button>
+  </StyledComponent>
+</Component>
+`;
+
+exports[`Button should render primary button correctly 1`] = `
+.c0 {
+  width: 100px;
+  height: 50px;
+  color: white;
+  border-radius: 4px;
+}
+
+<Component
+  handleClick={[MockFunction]}
+  theme={
+    Object {
+      "error": "#f8562d",
+      "light": "#dcdee091",
+      "primary": "#4548fd",
+      "secondary": "#ffffff",
+      "strong": "#052c4b",
+      "success": "#37da6b",
+      "warning": "#f0d74d",
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "
+  width: ",
+            [Function],
+            ";
+  height: ",
+            [Function],
+            ";
+  color: white;
+  border-radius: 4px;
+
+  ",
+            [Function],
+            "
+",
+          ],
+        },
+        "displayName": "styled.button",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "button",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    onClick={[MockFunction]}
+    theme={
+      Object {
+        "error": "#f8562d",
+        "light": "#dcdee091",
+        "primary": "#4548fd",
+        "secondary": "#ffffff",
+        "strong": "#052c4b",
+        "success": "#37da6b",
+        "warning": "#f0d74d",
+      }
+    }
+  >
+    <button
+      className="c0"
+      onClick={[MockFunction]}
+    >
+      Hello World
+    </button>
+  </StyledComponent>
+</Component>
+`;

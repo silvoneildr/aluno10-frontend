@@ -1,13 +1,31 @@
-// import React from 'react';
+import React from 'react';
 
-// import { storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 
-// import Card from '../../src/components/Card';
+import { Wrapper } from '../index.stories';
+import Button from '../../src/components/Button';
 
-// storiesOf('Components|Card', module).add('with text', () => <Card>Hello Button</Card>);
+storiesOf('Components|Button', module).add('primary', () => (
+  <Wrapper>
+    <Button handleClick={action('clicked')} color="primary">
+      Hello Button
+    </Button>
+  </Wrapper>
+));
 
-// storiesOf('Components|Card', module).add('with p', () => (
-//   <Card>
-//     <p>Hello world</p>
-//   </Card>
-// ));
+storiesOf('Components|Button', module).add('success', () => (
+  <Wrapper>
+    <Button handleClick={action('clicked')} color="success">
+      Hello Button
+    </Button>
+  </Wrapper>
+));
+
+storiesOf('Components|Button', module).add('error', () => (
+  <Wrapper>
+    <Button handleClick={action('clicked')} color="error">
+      Hello Button
+    </Button>
+  </Wrapper>
+));
