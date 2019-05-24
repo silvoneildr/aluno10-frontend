@@ -4,12 +4,42 @@ import Card from 'Components/Card';
 import Container from './styles';
 
 export default function Login() {
-  const [user, setUserField] = useState({ email: '', password: '' });
+  const [email, setEmail] = useState({ value: '', hasError: false, touched: false });
+  const [password, setPassword] = useState({ value: '', hasError: false, touched: false });
 
-  function handleField({ target: { name: fieldName, value } }) {
-    console.log('chamou');
-    setUserField({ ...user, [fieldName]: value });
-  }
+  const handleEmail = ({ target: { value: emailValue } }) => {
+    if (!emailValue && email.touched) {
+      setEmail({
+        ...email,
+        value: emailValue,
+        hasError: true
+      });
+    } else {
+      setEmail({
+        ...email,
+        value: emailValue,
+        hasError: false,
+        touched: true
+      });
+    }
+  };
+
+  const handlePassword = ({ target: { value: passwordValue } }) => {
+    if (!passwordValue && password.touched) {
+      setPassword({
+        ...password,
+        value: passwordValue,
+        hasError: true
+      });
+    } else {
+      setPassword({
+        ...password,
+        value: passwordValue,
+        hasError: false,
+        touched: true
+      });
+    }
+  };
 
   return (
     <Container>
@@ -18,17 +48,20 @@ export default function Login() {
           placeholder="E-mail"
           type="email"
           name="email"
-          onChange={handleField}
+          onChange={handleEmail}
           id="email"
-          value={user.email}
+          value={email.value}
         />
+        {email.hasError && <p>Erro</p>}
         <input
+          placeholder="Senha"
           type="password"
           name="password"
-          onChange={handleField}
+          onChange={handlePassword}
           id="password"
-          value={user.password}
+          value={password.value}
         />
+        {password.hasError && <p>Erro</p>}
       </Card>
     </Container>
   );

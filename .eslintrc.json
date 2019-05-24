@@ -27,7 +27,7 @@
     "import/prefer-default-export": 0,
     "no-unused-vars": 1,
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": 0
   },
   "settings": {
     "import/resolver": {
