@@ -19,6 +19,10 @@ module.exports = {
   testRegex: '__tests__/.*\\.test\\.js$',
   resolver: 'jest-webpack-resolver',
   setupFiles: ['<rootDir>/src/setupTests.js', '<rootDir>/node_modules/regenerator-runtime/runtime'],
-  setupFilesAfterEnv: ['jest-styled-components'],
+  setupFilesAfterEnv: [
+    'jest-styled-components',
+    'jest-dom/extend-expect',
+    'react-testing-library/cleanup-after-each'
+  ],
   snapshotSerializers: ['enzyme-to-json/serializer']
 };
