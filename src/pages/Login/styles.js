@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Form = styled.form`
   height: 100%;
   width: 100%;
 `;
 
-export default Container;
+export default Form;

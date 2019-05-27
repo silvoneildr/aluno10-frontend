@@ -4,7 +4,6 @@ module.exports = {
     'src/**/*.js',
     '!src/__tests__/**',
     '!src/assets/**',
-    '!src/pages/**',
     '!src/routes/**',
     '!src/services/**',
     '!src/store/index.js',

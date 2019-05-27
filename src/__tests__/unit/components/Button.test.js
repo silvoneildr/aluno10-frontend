@@ -1,37 +1,32 @@
 import React from 'react';
 import Button from 'Components/Button';
 import theme from 'Root/styles/theme';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
+import { render, cleanup } from 'react-testing-library';
+
+let wrapper;
+
+afterEach(() => {
+  if (wrapper) {
+    wrapper.unmount();
+  }
+  cleanup();
+});
 
 describe('Button', () => {
-  it('should render button correctly', () => {
-    const wrapper = mount(
+  it('should render correctly', () => {
+    const { container } = render(
       <Button handleClick={() => {}} theme={theme}>
         Hello World
       </Button>
     );
 
-    expect(wrapper).toMatchSnapshot();
-
-    wrapper.unmount();
-  });
-
-  it('should render primary button correctly', () => {
-    const click = jest.fn();
-    const wrapper = mount(
-      <Button handleClick={click} theme={theme}>
-        Hello World
-      </Button>
-    );
-
-    expect(wrapper).toMatchSnapshot();
-
-    wrapper.unmount();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should handle click correctly', () => {
     const click = jest.fn();
-    const wrapper = shallow(
+    wrapper = shallow(
       <Button handleClick={click} theme={theme}>
         Hello World
       </Button>
@@ -39,7 +34,5 @@ describe('Button', () => {
 
     wrapper.props().onClick();
     expect(click).toHaveBeenCalled();
-
-    wrapper.unmount();
   });
 });

@@ -5,12 +5,34 @@ import { render, fireEvent, cleanup } from 'react-testing-library';
 afterEach(cleanup);
 
 describe('Login', () => {
-  it('should render login element correctly', () => {
-    const { getByPlaceholderText } = render(<Login />);
-    const input = getByPlaceholderText('E-mail');
-    fireEvent.change(input, {
+  it('should handle fields and show errors correctly', () => {
+    const { getByPlaceholderText, queryAllByText } = render(<Login />);
+    const email = getByPlaceholderText('E-mail');
+    const password = getByPlaceholderText('Senha');
+
+    fireEvent.change(email, {
       target: { value: 'wagnerdutra1010@gmail.com', name: 'email' }
     });
-    expect(input.value).toBe('wagnerdutra1010@gmail.com');
+    fireEvent.change(password, {
+      target: { value: '123456', name: 'password' }
+    });
+
+    expect(email.value).toBe('wagnerdutra1010@gmail.com');
+    expect(password.value).toBe('123456');
+
+    fireEvent.change(email, {
+      target: { value: '', name: 'email' }
+    });
+    fireEvent.change(password, {
+      target: { value: '', name: 'password' }
+    });
+
+    const emailError = queryAllByText('E-mail obrigatório');
+    const passwordError = queryAllByText('Senha obrigatória');
+
+    expect(email.value).toBe('');
+    expect(password.value).toBe('');
+    expect(emailError).toBeTruthy();
+    expect(passwordError).toBeTruthy();
   });
 });

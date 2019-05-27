@@ -1,14 +1,10 @@
 import React from 'react';
-import Card from 'Components/Card';
+import Login from 'Pages/Login';
 import { render } from 'react-testing-library';
 
-describe('Card', () => {
+describe('Login', () => {
   it('should render correctly', () => {
-    const { container } = render(
-      <Card>
-        <p>Hello World</p>
-      </Card>
-    );
+    const { container } = render(<Login />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Card from 'Components/Card';
-import Container from './styles';
+import Form from './styles';
 
 export default function Login() {
   const [email, setEmail] = useState({ value: '', hasError: false, touched: false });
@@ -42,8 +42,8 @@ export default function Login() {
   };
 
   return (
-    <Container>
-      <Card test="wagner">
+    <Form>
+      <Card>
         <input
           placeholder="E-mail"
           type="email"
@@ -52,7 +52,7 @@ export default function Login() {
           id="email"
           value={email.value}
         />
-        {email.hasError && <p>Erro</p>}
+        {email.hasError && <p>E-mail obrigatório</p>}
         <input
           placeholder="Senha"
           type="password"
@@ -60,9 +60,11 @@ export default function Login() {
           onChange={handlePassword}
           id="password"
           value={password.value}
+          data-testid="password"
         />
-        {password.hasError && <p>Erro</p>}
+        {password.hasError && <p>Senha obrigatória</p>}
+        <button type="submit">Entrar</button>
       </Card>
-    </Container>
+    </Form>
   );
 }

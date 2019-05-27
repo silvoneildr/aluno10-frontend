@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render correctly 1`] = `
+.c1 {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.c0 {
+  height: 100%;
+  width: 100%;
+}
+
+<form
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <input
+      id="email"
+      name="email"
+      placeholder="E-mail"
+      type="email"
+      value=""
+    />
+    <input
+      data-testid="password"
+      id="password"
+      name="password"
+      placeholder="Senha"
+      type="password"
+      value=""
+    />
+    <button
+      type="submit"
+    >
+      Entrar
+    </button>
+  </div>
+</form>
+`;
