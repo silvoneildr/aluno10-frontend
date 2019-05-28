@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 
 import Card from 'Components/Card';
-import Container from './styles';
+import Button from 'Components/Button';
+import Input from 'Components/Input';
+import LabelError from 'Components/Label/Error';
+import Container, { Form } from './styles';
 
-export default function Login() {
+export default function Login(props) {
   const [email, setEmail] = useState({ value: '', hasError: false, touched: false });
   const [password, setPassword] = useState({ value: '', hasError: false, touched: false });
 
-  const handleEmail = ({ target: { value: emailValue } }) => {
+  function handleEmail({ target: { value: emailValue } }) {
     if (!emailValue && email.touched) {
       setEmail({
         ...email,
@@ -22,9 +25,9 @@ export default function Login() {
         touched: true
       });
     }
-  };
+  }
 
-  const handlePassword = ({ target: { value: passwordValue } }) => {
+  function handlePassword({ target: { value: passwordValue } }) {
     if (!passwordValue && password.touched) {
       setPassword({
         ...password,
@@ -39,29 +42,42 @@ export default function Login() {
         touched: true
       });
     }
-  };
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!email.value || !password.value) {
+      return;
+    }
+    alert('Foi');
+  }
 
   return (
     <Container>
-      <Card test="wagner">
-        <input
-          placeholder="E-mail"
-          type="email"
-          name="email"
-          onChange={handleEmail}
-          id="email"
-          value={email.value}
-        />
-        {email.hasError && <p>Erro</p>}
-        <input
-          placeholder="Senha"
-          type="password"
-          name="password"
-          onChange={handlePassword}
-          id="password"
-          value={password.value}
-        />
-        {password.hasError && <p>Erro</p>}
+      <Card>
+        <Form onSubmit={handleSubmit}>
+          <Input
+            placeholder="E-mail"
+            type="email"
+            name="email"
+            onChange={handleEmail}
+            value={email.value}
+            hasError={email.hasError}
+          />
+          {email.hasError && <LabelError>E-mail obrigatório</LabelError>}
+          <Input
+            placeholder="Senha"
+            type="password"
+            name="password"
+            onChange={handlePassword}
+            value={password.value}
+            hasError={password.hasError}
+          />
+          {password.hasError && <LabelError>Senha obrigatória</LabelError>}
+          <Button type="submit" onClick={handleSubmit} color="primary">
+            Login
+          </Button>
+        </Form>
       </Card>
     </Container>
   );

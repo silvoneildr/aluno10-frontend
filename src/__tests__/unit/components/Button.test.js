@@ -6,7 +6,7 @@ import { shallow, mount } from 'enzyme';
 describe('Button', () => {
   it('should render button correctly', () => {
     const wrapper = mount(
-      <Button handleClick={() => {}} theme={theme}>
+      <Button onClick={() => {}} theme={theme}>
         Hello World
       </Button>
     );
@@ -19,7 +19,7 @@ describe('Button', () => {
   it('should render primary button correctly', () => {
     const click = jest.fn();
     const wrapper = mount(
-      <Button handleClick={click} theme={theme}>
+      <Button onClick={click} theme={theme}>
         Hello World
       </Button>
     );
@@ -32,7 +32,7 @@ describe('Button', () => {
   it('should handle click correctly', () => {
     const click = jest.fn();
     const wrapper = shallow(
-      <Button handleClick={click} theme={theme}>
+      <Button onClick={click} theme={theme}>
         Hello World
       </Button>
     );

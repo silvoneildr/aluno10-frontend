@@ -2,17 +2,15 @@
 
 exports[`Button should render button correctly 1`] = `
 .c0 {
-  width: 100px;
   height: 50px;
-  color: white;
   border-radius: 4px;
 }
 
 <Component
-  handleClick={[Function]}
+  onClick={[Function]}
   theme={
     Object {
-      "error": "#f8562d",
+      "error": "#FF9494",
       "light": "#dcdee091",
       "primary": "#4548fd",
       "secondary": "#ffffff",
@@ -28,30 +26,20 @@ exports[`Button should render button correctly 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-bdVaJa",
+          "componentId": "styles__StyleButton-sc-188dz6f-0",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "
-  width: ",
+            "height:",
             [Function],
-            ";
-  height: ",
+            ";border-radius:4px;",
             [Function],
-            ";
-  color: white;
-  border-radius: 4px;
-
-  ",
-            [Function],
-            "
-",
           ],
         },
-        "displayName": "styled.button",
+        "displayName": "styles__StyleButton",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "sc-bdVaJa",
+        "styledComponentId": "styles__StyleButton-sc-188dz6f-0",
         "target": "button",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -62,7 +50,7 @@ exports[`Button should render button correctly 1`] = `
     onClick={[Function]}
     theme={
       Object {
-        "error": "#f8562d",
+        "error": "#FF9494",
         "light": "#dcdee091",
         "primary": "#4548fd",
         "secondary": "#ffffff",
@@ -84,17 +72,15 @@ exports[`Button should render button correctly 1`] = `
 
 exports[`Button should render primary button correctly 1`] = `
 .c0 {
-  width: 100px;
   height: 50px;
-  color: white;
   border-radius: 4px;
 }
 
 <Component
-  handleClick={[MockFunction]}
+  onClick={[MockFunction]}
   theme={
     Object {
-      "error": "#f8562d",
+      "error": "#FF9494",
       "light": "#dcdee091",
       "primary": "#4548fd",
       "secondary": "#ffffff",
@@ -110,30 +96,20 @@ exports[`Button should render primary button correctly 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-bdVaJa",
+          "componentId": "styles__StyleButton-sc-188dz6f-0",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "
-  width: ",
+            "height:",
             [Function],
-            ";
-  height: ",
+            ";border-radius:4px;",
             [Function],
-            ";
-  color: white;
-  border-radius: 4px;
-
-  ",
-            [Function],
-            "
-",
           ],
         },
-        "displayName": "styled.button",
+        "displayName": "styles__StyleButton",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "sc-bdVaJa",
+        "styledComponentId": "styles__StyleButton-sc-188dz6f-0",
         "target": "button",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -144,7 +120,7 @@ exports[`Button should render primary button correctly 1`] = `
     onClick={[MockFunction]}
     theme={
       Object {
-        "error": "#f8562d",
+        "error": "#FF9494",
         "light": "#dcdee091",
         "primary": "#4548fd",
         "secondary": "#ffffff",
