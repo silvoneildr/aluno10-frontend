@@ -1,38 +1,26 @@
 import React from 'react';
 import Button from 'Components/Button';
 import theme from 'Root/styles/theme';
-import { shallow } from 'enzyme';
-import { render, cleanup } from 'react-testing-library';
+import { render, cleanup, fireEvent } from 'react-testing-library';
 
-let wrapper;
+afterEach(cleanup);
 
-afterEach(() => {
-  if (wrapper) {
-    wrapper.unmount();
-  }
-  cleanup();
-});
+function renderButton(props) {
+  const utils = render(<Button onClick={() => {}} theme={theme} {...props} />);
+  const button = utils.container.firstChild;
+  return { ...utils, button };
+}
 
-describe('Button', () => {
+describe('<Button />', () => {
   it('should render correctly', () => {
-    const { container } = render(
-      <Button onClick={() => {}} theme={theme}>
-        Hello World
-      </Button>
-    );
-
-    expect(container.firstChild).toMatchSnapshot();
+    const { button } = renderButton({ children: 'Hello World' });
+    expect(button).toMatchSnapshot();
   });
 
   it('should handle click correctly', () => {
     const click = jest.fn();
-    wrapper = shallow(
-      <Button onClick={click} theme={theme}>
-        Hello World
-      </Button>
-    );
-
-    wrapper.props().onClick();
+    const { button } = renderButton({ onClick: click });
+    fireEvent.click(button);
     expect(click).toHaveBeenCalled();
   });
 });

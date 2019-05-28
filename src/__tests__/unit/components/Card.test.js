@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'Components/Card';
 import { render } from 'react-testing-library';
 
-describe('Card', () => {
+describe('<Card />', () => {
   it('should render correctly', () => {
     const { container } = render(
       <Card>

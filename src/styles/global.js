@@ -20,7 +20,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-    background: ${props => props.theme.strong};
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 14px;
     color: white;

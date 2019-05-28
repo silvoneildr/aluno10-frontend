@@ -6,9 +6,19 @@ exports[`Login should render correctly 1`] = `
   border-radius: 2px;
 }
 
-.c3 {
-  height: 50px;
+.c4 {
+  cursor: pointer;
   border-radius: 4px;
+  color: white;
+  border: none;
+  height: 50px;
+}
+
+.c3 {
+  border-radius: 3px;
+  border: 1px;
+  height: 50px;
+  padding: 0 15px;
 }
 
 .c0 {
@@ -57,21 +67,21 @@ exports[`Login should render correctly 1`] = `
       class="c2"
     >
       <input
-        class=""
+        class="c3"
         name="email"
         placeholder="E-mail"
         type="email"
         value=""
       />
       <input
-        class=""
+        class="c3"
         name="password"
         placeholder="Senha"
         type="password"
         value=""
       />
       <button
-        class="c3"
+        class="c4"
         color="primary"
         type="submit"
       >
