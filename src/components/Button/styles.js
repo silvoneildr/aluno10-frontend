@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const StyleButton = styled.button`
-  width: ${props => props.width || '100px'};
   height: ${props => props.height || '50px'};
-  color: white;
   border-radius: 4px;
 
   ${props =>

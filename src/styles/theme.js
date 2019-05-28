@@ -5,5 +5,5 @@ export default {
   light: '#dcdee091',
   success: '#37da6b',
   warning: '#f0d74d',
-  error: '#f8562d'
+  error: '#FF9494'
 };

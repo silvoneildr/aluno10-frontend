@@ -16,7 +16,7 @@ afterEach(() => {
 describe('Button', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <Button handleClick={() => {}} theme={theme}>
+      <Button onClick={() => {}} theme={theme}>
         Hello World
       </Button>
     );
@@ -27,7 +27,7 @@ describe('Button', () => {
   it('should handle click correctly', () => {
     const click = jest.fn();
     wrapper = shallow(
-      <Button handleClick={click} theme={theme}>
+      <Button onClick={click} theme={theme}>
         Hello World
       </Button>
     );
