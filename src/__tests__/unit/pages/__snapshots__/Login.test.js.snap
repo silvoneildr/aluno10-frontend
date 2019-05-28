@@ -2,43 +2,82 @@
 
 exports[`Login should render correctly 1`] = `
 .c1 {
-  width: 100%;
-  height: 100%;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 2px;
+}
+
+.c3 {
+  height: 50px;
+  border-radius: 4px;
 }
 
 .c0 {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-<form
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 300px;
+}
+
+.c2 input:last-of-type {
+  margin-top: 10px;
+}
+
+.c2 button {
+  margin-top: 10px;
+}
+
+<div
   class="c0"
 >
   <div
     class="c1"
   >
-    <input
-      id="email"
-      name="email"
-      placeholder="E-mail"
-      type="email"
-      value=""
-    />
-    <input
-      data-testid="password"
-      id="password"
-      name="password"
-      placeholder="Senha"
-      type="password"
-      value=""
-    />
-    <button
-      type="submit"
+    <form
+      class="c2"
     >
-      Entrar
-    </button>
+      <input
+        class=""
+        name="email"
+        placeholder="E-mail"
+        type="email"
+        value=""
+      />
+      <input
+        class=""
+        name="password"
+        placeholder="Senha"
+        type="password"
+        value=""
+      />
+      <button
+        class="c3"
+        color="primary"
+        type="submit"
+      >
+        Login
+      </button>
+    </form>
   </div>
-</form>
+</div>
 `;

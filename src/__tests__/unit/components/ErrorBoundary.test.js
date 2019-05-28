@@ -16,12 +16,12 @@ describe('ErrorBoundary', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render error', () => {
-    const { container } = render(
-      <ErrorBoundary>
-        <ThrowError message="Erro" />
-      </ErrorBoundary>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
+  // it('should render error', () => {
+  //   const { container } = render(
+  //     <ErrorBoundary>
+  //       <ThrowError message="Erro" />
+  //     </ErrorBoundary>
+  //   );
+  //   expect(container.firstChild).toMatchSnapshot();
+  // });
 });

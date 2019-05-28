@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorBoundary should render error 1`] = `
-<h1>
-  Something went wrong.
-</h1>
-`;
-
 exports[`ErrorBoundary should render without error 1`] = `
 <p>
   Hellor World

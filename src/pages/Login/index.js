@@ -6,7 +6,7 @@ import Input from 'Components/Input';
 import LabelError from 'Components/Label/Error';
 import Container, { Form } from './styles';
 
-export default function Login(props) {
+export default function Login() {
   const [email, setEmail] = useState({ value: '', hasError: false, touched: false });
   const [password, setPassword] = useState({ value: '', hasError: false, touched: false });
 
@@ -79,6 +79,6 @@ export default function Login(props) {
           </Button>
         </Form>
       </Card>
-    </Form>
+    </Container>
   );
 }

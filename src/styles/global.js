@@ -26,19 +26,6 @@ const GlobalStyle = createGlobalStyle`
     color: white;
   }
 
-  button {
-    cursor: pointer;
-    color: white;
-    border: none;
-  }
-
-  input {
-    border-radius: 3px;
-    border: 1px;
-    height: 50px;
-    padding: 0 15px;
-  }
-
 `;
 
 export const ErrorStyle = css`
