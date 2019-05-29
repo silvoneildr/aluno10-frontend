@@ -1,9 +1,7 @@
 import React from 'react';
 import Button from 'Components/Button';
 import theme from 'Root/styles/theme';
-import { render, cleanup, fireEvent } from 'react-testing-library';
-
-afterEach(cleanup);
+import { render, fireEvent } from 'react-testing-library';
 
 function renderButton(props) {
   const utils = render(<Button onClick={() => {}} theme={theme} {...props} />);
