@@ -4,9 +4,17 @@ import { render, fireEvent } from 'react-testing-library';
 
 describe('Login', () => {
   it('should handle fields and show errors correctly', () => {
-    const { getByPlaceholderText, queryAllByText } = render(<Login />);
+    const { getByPlaceholderText, queryByText } = render(<Login />);
+
+    const emailErrorMessage = 'E-mail obrigatório';
+    const passwordErrorMessage = 'Senha obrigatória';
+
     const email = getByPlaceholderText('E-mail');
     const password = getByPlaceholderText('Senha');
+
+    // expect that email and password messages errors are not in the document
+    expect(queryByText(emailErrorMessage)).toBeNull();
+    expect(queryByText(passwordErrorMessage)).toBeNull();
 
     // insert email and password for login
     fireEvent.change(email, {
@@ -28,14 +36,10 @@ describe('Login', () => {
       target: { value: '', name: 'password' }
     });
 
-    // fiend email and password error messages
-    const emailError = queryAllByText('E-mail obrigatório');
-    const passwordError = queryAllByText('Senha obrigatória');
-
     // expect that fields are emptys and the error messages exists
     expect(email.value).toBe('');
     expect(password.value).toBe('');
-    expect(emailError).toBeTruthy();
-    expect(passwordError).toBeTruthy();
+    expect(queryByText(emailErrorMessage)).toBeInTheDocument();
+    expect(queryByText(passwordErrorMessage)).toBeInTheDocument();
   });
 });
