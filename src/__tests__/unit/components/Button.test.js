@@ -16,9 +16,9 @@ describe('<Button />', () => {
   });
 
   it('should handle click correctly', () => {
-    const click = jest.fn();
-    const { button } = renderButton({ onClick: click });
+    const onClick = jest.fn();
+    const { button } = renderButton({ onClick });
     fireEvent.click(button);
-    expect(click).toHaveBeenCalled();
+    expect(onClick).toHaveBeenCalled();
   });
 });
