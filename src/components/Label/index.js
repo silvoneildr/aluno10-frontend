@@ -1,11 +1,6 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import Span from './styles';
 
-const Label = React.memo(({ children, ...rest }) => <Span {...rest}>{children}</Span>);
-
-Label.propTypes = {
-  children: propTypes.string.isRequired
-};
+const Label = React.memo(props => <Span {...props} />);
 
 export default Label;
