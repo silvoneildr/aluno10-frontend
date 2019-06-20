@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
@@ -31,6 +31,9 @@ class Welcome extends Component {
   render() {
     return (
       <Container>
+        <h1>
+          <FormattedMessage id="header" />
+        </h1>
         <p>{this.state.now}</p>
         <HelloComponent {...this.props.welcome} />
       </Container>
