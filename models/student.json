@@ -1,9 +1,0 @@
-{
-	"id": "Int",
-	"name": "String",
-	"dateBirthday": "Date - ISO format",
-	"documentId": "String",
-	"email": "String",
-	"avatar": "String",
-	"active": "Boolean"
-}
