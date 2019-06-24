@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render correctly 1`] = `
+.c1 {
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.c4 {
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  height: 50px;
+}
+
+.c3 {
+  border-radius: 3px;
+  border: 1px;
+  height: 50px;
+  padding: 0 15px;
+}
+
+.c0 {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 300px;
+}
+
+.c2 input:last-of-type {
+  margin-top: 10px;
+}
+
+.c2 button {
+  margin-top: 10px;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <form
+      class="c2"
+    >
+      <input
+        class="c3"
+        name="email"
+        placeholder="E-mail"
+        type="email"
+        value=""
+      />
+      <input
+        class="c3"
+        name="password"
+        placeholder="Senha"
+        type="password"
+        value=""
+      />
+      <button
+        class="c4"
+        color="primary"
+        type="submit"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</div>
+`;

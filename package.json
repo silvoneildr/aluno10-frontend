@@ -9,11 +9,13 @@
   },
   "scripts": {
     "build": "webpack --config build/webpack.prod.js",
-    "start": "webpack-dev-server --inline --progress --config build/webpack.dev.js",
+    "start": "webpack-dev-server --inline --progress --hot --config build/webpack.dev.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "json-server": "node mock/server.js"
+    "json-server": "node mock/server.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -29,7 +31,8 @@
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2",
     "regenerator-runtime": "^0.13.2",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "styled-normalize": "^8.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -37,6 +40,11 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "@types/jest": "^24.0.13",
     "axios-mock-adapter": "^1.16.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
@@ -55,15 +63,18 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "file-loader": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
     "html-webpack-root-plugin": "^0.10.0",
     "image-webpack-loader": "^4.6.0",
     "jest": "^24.5.0",
+    "jest-dom": "^3.3.0",
     "jest-styled-components": "^6.3.1",
     "jest-webpack-resolver": "^0.3.0",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
+    "react-testing-library": "^7.0.1",
     "redux-mock-store": "^1.5.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

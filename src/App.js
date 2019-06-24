@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+
 import Routes from './routes';
 import GlobalStype from './styles/global';
-
-import store from './store';
+import theme from './styles/theme';
 
 const App = () => (
-  <Provider store={store}>
+  <ThemeProvider theme={theme}>
     <BrowserRouter>
       <GlobalStype />
       <Routes />
     </BrowserRouter>
-  </Provider>
+  </ThemeProvider>
 );
 
 export default App;

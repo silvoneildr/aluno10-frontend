@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Label /> should render correclty 1`] = `
+.c0 {
+  color: #4548fd;
+  margin: 5px 0;
+}
+
+<span
+  class="c0"
+>
+  Informação
+</span>
+`;
+
+exports[`<LabelError /> should render correclty 1`] = `
+.c0 {
+  color: #FF9494;
+  margin: 5px 0;
+}
+
+<span
+  class="c0"
+  color="error"
+>
+  Informação
+</span>
+`;
