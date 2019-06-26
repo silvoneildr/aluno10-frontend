@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import { useSelector } from 'react-redux';
 
 import Card from 'Components/Card';
 import Button from 'Components/Button';
@@ -9,6 +10,7 @@ import Container, { Form } from './styles';
 export default function Login() {
   const [email, setEmail] = useState({ value: '', hasError: false, touched: false });
   const [password, setPassword] = useState({ value: '', hasError: false, touched: false });
+  // const locale = useSelector(state => state.locale);
 
   function handleEmail({ target: { value: emailValue } }) {
     if (!emailValue && email.touched) {
@@ -51,7 +53,6 @@ export default function Login() {
     }
     alert('Foi');
   }
-
   return (
     <Container>
       <Card>
