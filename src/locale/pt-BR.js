@@ -1,7 +1,10 @@
 export const ptBR = {
   // messages to login page
   login: {
-    inputPlaceholderEmail: 'E-mail',
-    inputPlaceholderPassword: 'Senha'
+    placeholderEmail: 'E-mail',
+    placeholderPassword: 'Senha',
+    emailError: 'E-mail obrigatório.',
+    passwordError: 'Senha obrigatória.',
+    buttonLogin: 'Entrar'
   }
 };

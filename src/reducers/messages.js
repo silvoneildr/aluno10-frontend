@@ -1,6 +1,9 @@
-import { GET_MESSAGES } from '../actions/actionTypes';
+import { GET_MESSAGES } from './types';
+import { getMessagesByLocale } from '../locale';
 
-const messages = (state = {}, action) => {
+const INITIAL_STATE = getMessagesByLocale('en-US');
+
+const messages = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case GET_MESSAGES:
       return { ...state, ...action.data };

@@ -1,4 +1,4 @@
-import { GET_LOCALE } from '../actions/actionTypes';
+import { GET_LOCALE } from './types';
 
 const INITIAL_STATE = 'en-US';
 

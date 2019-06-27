@@ -7,15 +7,10 @@ import Input from 'Components/Input';
 import LabelError from 'Components/Label/Error';
 import Container, { Form } from './styles';
 
-import { getMessagesByLocale } from '../../locale';
-
 export default function Login() {
   const [email, setEmail] = useState({ value: '', hasError: false, touched: false });
   const [password, setPassword] = useState({ value: '', hasError: false, touched: false });
-  const locale = useSelector(state => state.locale);
-
-  console.log(locale);
-  console.log(getMessagesByLocale('en-US'));
+  const loginMessages = useSelector(state => state.messages.login);
 
   function handleEmail({ target: { value: emailValue } }) {
     if (!emailValue && email.touched) {
@@ -63,25 +58,25 @@ export default function Login() {
       <Card>
         <Form onSubmit={handleSubmit}>
           <Input
-            placeholder="E-mail"
+            placeholder={loginMessages.placeholderEmail}
             type="email"
             name="email"
             onChange={handleEmail}
             value={email.value}
             hasError={email.hasError}
           />
-          {email.hasError && <LabelError>E-mail obrigatório</LabelError>}
+          {email.hasError && <LabelError>{loginMessages.emailError}</LabelError>}
           <Input
-            placeholder="Senha"
+            placeholder={loginMessages.placeholderPassword}
             type="password"
             name="password"
             onChange={handlePassword}
             value={password.value}
             hasError={password.hasError}
           />
-          {password.hasError && <LabelError>Senha obrigatória</LabelError>}
+          {password.hasError && <LabelError>{loginMessages.passwordError}</LabelError>}
           <Button type="submit" onClick={handleSubmit} color="primary">
-            Login
+            {loginMessages.buttonLogin}
           </Button>
         </Form>
       </Card>
