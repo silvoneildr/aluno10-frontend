@@ -1,4 +1,4 @@
-export const enBR = {
+export const enUS = {
   // messages to login page
   login: {
     inputPlaceholderEmail: 'E-mail',

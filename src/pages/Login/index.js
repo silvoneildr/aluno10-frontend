@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import Card from 'Components/Card';
 import Button from 'Components/Button';
@@ -7,10 +7,15 @@ import Input from 'Components/Input';
 import LabelError from 'Components/Label/Error';
 import Container, { Form } from './styles';
 
+import { getMessagesByLocale } from '../../locale';
+
 export default function Login() {
   const [email, setEmail] = useState({ value: '', hasError: false, touched: false });
   const [password, setPassword] = useState({ value: '', hasError: false, touched: false });
-  // const locale = useSelector(state => state.locale);
+  const locale = useSelector(state => state.locale);
+
+  console.log(locale);
+  console.log(getMessagesByLocale('en-US'));
 
   function handleEmail({ target: { value: emailValue } }) {
     if (!emailValue && email.touched) {
