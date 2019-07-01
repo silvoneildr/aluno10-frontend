@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { render } from 'react-testing-library';
-import { mount } from 'enzyme';
+// import { mount } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 
 import Login from 'Pages/Login';
@@ -23,23 +23,12 @@ describe('Login', () => {
   };
 
   const store = mockStore(initialState);
-  let wrapper;
-  beforeEach(() => {
-    wrapper = mount(
-      <div>
-        <Provider store={store}>
-          <Login />
-        </Provider>
-      </div>
-    );
-  });
-
-  it('should have a Card component', () => {
-    expect(wrapper.find('Card')).not.toBeFalsy();
-  });
-
   it('should render correctly', () => {
-    const { container } = render(<Login />);
+    const { container } = render(
+      <Provider store={store}>
+        <Login />
+      </Provider>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
