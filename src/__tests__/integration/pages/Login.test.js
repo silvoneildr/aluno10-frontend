@@ -1,10 +1,34 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import Login from 'Pages/Login';
 import { render, fireEvent } from 'react-testing-library';
+// import { mount } from 'enzyme';
+import configureMockStore from 'redux-mock-store';
+
+const mockStore = configureMockStore([]);
 
 describe('Login', () => {
+  const initialState = {
+    locale: 'en-US',
+    messages: {
+      login: {
+        placeholderEmail: 'E-mail',
+        placeholderPassword: 'Password',
+        emailError: 'E-mail is required.',
+        passwordError: 'Password is required.',
+        buttonLogin: 'Login'
+      }
+    }
+  };
+
+  const store = mockStore(initialState);
+
   it('should handle fields and show errors correctly', () => {
-    const { getByPlaceholderText, queryByText } = render(<Login />);
+    const { getByPlaceholderText, queryByText } = render(
+      <Provider store={store}>
+        <Login />
+      </Provider>
+    );
 
     const emailErrorMessage = 'E-mail obrigatório';
     const passwordErrorMessage = 'Senha obrigatória';
