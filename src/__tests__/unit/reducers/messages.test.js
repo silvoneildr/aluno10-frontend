@@ -14,12 +14,14 @@ const INITIAL_STATE = {
   }
 };
 
-test('should render messages with type GET_MESSAGES', () => {
-  const msg = messages(INITIAL_STATE, { type: GET_MESSAGES });
-  expect(msg).toEqual(INITIAL_STATE);
-});
+describe('Reducer Messages', () => {
+  test('should render messages with type GET_MESSAGES', () => {
+    const msg = messages(INITIAL_STATE, { type: GET_MESSAGES });
+    expect(msg).toEqual(INITIAL_STATE);
+  });
 
-test('should render messages without type', () => {
-  const msg = messages(INITIAL_STATE, '');
-  expect(msg).toEqual(INITIAL_STATE);
+  test('should render messages without type', () => {
+    const msg = messages(INITIAL_STATE, '');
+    expect(msg).toEqual(INITIAL_STATE);
+  });
 });
