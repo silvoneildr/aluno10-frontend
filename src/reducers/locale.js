@@ -5,7 +5,7 @@ const INITIAL_STATE = 'en-US';
 const locale = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case GET_LOCALE:
-      return { ...state, ...action.data };
+      return state;
     default:
       return state;
   }
