@@ -30,11 +30,11 @@ describe('Login', () => {
       </Provider>
     );
 
-    const emailErrorMessage = 'E-mail obrigatório';
-    const passwordErrorMessage = 'Senha obrigatória';
+    const emailErrorMessage = 'E-mail is required.';
+    const passwordErrorMessage = 'Password is required.';
 
     const email = getByPlaceholderText('E-mail');
-    const password = getByPlaceholderText('Senha');
+    const password = getByPlaceholderText('Password');
 
     // expect that email and password messages errors are not in the document
     expect(queryByText(emailErrorMessage)).toBeNull();

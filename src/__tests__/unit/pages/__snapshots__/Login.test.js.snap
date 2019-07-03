@@ -76,7 +76,7 @@ exports[`Login should render correctly 1`] = `
       <input
         class="c3"
         name="password"
-        placeholder="Senha"
+        placeholder="Password"
         type="password"
         value=""
       />
