@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 
 import Card from 'Components/Card';
 import Button from 'Components/Button';
-import Input from 'Components/Input';
 import LabelError from 'Components/Label/Error';
 import Container, { Form } from './styles';
 
@@ -57,23 +56,29 @@ export default function Login() {
     <Container>
       <Card>
         <Form onSubmit={handleSubmit}>
-          <Input
-            placeholder={loginMessages.placeholderEmail}
-            type="email"
-            name="email"
-            onChange={handleEmail}
-            value={email.value}
-            hasError={email.hasError}
-          />
+          <label htmlFor="email">
+            <input
+              placeholder={loginMessages.placeholderEmail}
+              type="email"
+              name="email"
+              onChange={handleEmail}
+              value={email.value}
+              className={email.hasError ? 'error' : ''}
+              id="email"
+            />
+          </label>
           {email.hasError && <LabelError>{loginMessages.emailError}</LabelError>}
-          <Input
-            placeholder={loginMessages.placeholderPassword}
-            type="password"
-            name="password"
-            onChange={handlePassword}
-            value={password.value}
-            hasError={password.hasError}
-          />
+          <label htmlFor="password">
+            <input
+              placeholder={loginMessages.placeholderPassword}
+              type="password"
+              name="password"
+              onChange={handlePassword}
+              value={password.value}
+              className={password.hasError ? 'error' : ''}
+              id="password"
+            />
+          </label>
           {password.hasError && <LabelError>{loginMessages.passwordError}</LabelError>}
           <Button type="submit" onClick={handleSubmit} color="primary">
             {loginMessages.buttonLogin}
