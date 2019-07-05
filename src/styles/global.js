@@ -1,6 +1,10 @@
 import { createGlobalStyle, css } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
+export const ErrorStyle = css`
+  border: 2px solid ${props => props.theme.error};
+`;
+
 const GlobalStyle = createGlobalStyle`
 
   ${normalize}
@@ -25,10 +29,18 @@ const GlobalStyle = createGlobalStyle`
     color: white;
   }
 
-`;
+  input {
+    border-radius: 3px;
+    border: 1px;
+    height: 50px;
+    padding: 0 15px;
+    width: 100%;
+  }
 
-export const ErrorStyle = css`
-  border: 2px solid ${props => props.theme.error};
+  input.error {
+    ${ErrorStyle}
+  }
+
 `;
 
 export default GlobalStyle;
