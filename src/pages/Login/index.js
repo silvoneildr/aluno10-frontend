@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import Card from 'Components/Card';
 import Button from 'Components/Button';
-import Input from 'Components/Input';
 import LabelError from 'Components/Label/Error';
 import Container, { Form } from './styles';
 
 export default function Login() {
   const [email, setEmail] = useState({ value: '', hasError: false, touched: false });
   const [password, setPassword] = useState({ value: '', hasError: false, touched: false });
+  const loginMessages = useSelector(state => state.messages.login);
 
   function handleEmail({ target: { value: emailValue } }) {
     if (!emailValue && email.touched) {
@@ -51,31 +52,36 @@ export default function Login() {
     }
     alert('Foi');
   }
-
   return (
     <Container>
       <Card>
         <Form onSubmit={handleSubmit}>
-          <Input
-            placeholder="E-mail"
-            type="email"
-            name="email"
-            onChange={handleEmail}
-            value={email.value}
-            hasError={email.hasError}
-          />
-          {email.hasError && <LabelError>E-mail obrigatório</LabelError>}
-          <Input
-            placeholder="Senha"
-            type="password"
-            name="password"
-            onChange={handlePassword}
-            value={password.value}
-            hasError={password.hasError}
-          />
-          {password.hasError && <LabelError>Senha obrigatória</LabelError>}
+          <label htmlFor="email">
+            <input
+              placeholder={loginMessages.placeholderEmail}
+              type="email"
+              name="email"
+              onChange={handleEmail}
+              value={email.value}
+              className={email.hasError ? 'error' : ''}
+              id="email"
+            />
+          </label>
+          {email.hasError && <LabelError>{loginMessages.emailError}</LabelError>}
+          <label htmlFor="password">
+            <input
+              placeholder={loginMessages.placeholderPassword}
+              type="password"
+              name="password"
+              onChange={handlePassword}
+              value={password.value}
+              className={password.hasError ? 'error' : ''}
+              id="password"
+            />
+          </label>
+          {password.hasError && <LabelError>{loginMessages.passwordError}</LabelError>}
           <Button type="submit" onClick={handleSubmit} color="primary">
-            Login
+            {loginMessages.buttonLogin}
           </Button>
         </Form>
       </Card>
