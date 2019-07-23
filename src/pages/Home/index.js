@@ -1,15 +1,22 @@
 import React, { Fragment } from 'react';
 import Sidebar from 'Components/Sidebar';
 
-import Container from './styles';
+import { HeaderContainer, Main, Content, CardContent } from './styles';
 
 const Header = React.memo(() => (
   <Fragment>
-    <Container>
+    <HeaderContainer>
       <h3>Aluno 10</h3>
       <h3>User</h3>
-    </Container>
-    <Sidebar />
+    </HeaderContainer>
+    <Main>
+      <Sidebar />
+      <Content>
+        <CardContent />
+        <CardContent />
+        <CardContent />
+      </Content>
+    </Main>
   </Fragment>
 ));
 

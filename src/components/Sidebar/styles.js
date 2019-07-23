@@ -17,8 +17,8 @@ export const Sidebar = styled.div`
 
 export const ToggleBtn = styled.div`
   position: absolute;
-  top: 30px;
-  left: 330px;
+  top: 15px;
+  left: 315px;
   cursor: pointer;
 
   span {
