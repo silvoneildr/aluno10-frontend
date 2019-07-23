@@ -32,7 +32,7 @@ export const Content = styled.div`
 export const CardContent = styled.div`
   background: ${props => props.theme.secondary};
   padding: 5px;
-  width: 300px;
+  width: 350px;
   height: 180px;
   margin-top: 10px;
   line-height: 150px;
