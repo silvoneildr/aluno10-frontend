@@ -2,7 +2,6 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import Login from 'Pages/Login';
 import { render, fireEvent } from 'react-testing-library';
-// import { mount } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 
 const mockStore = configureMockStore([]);
