@@ -4,12 +4,12 @@ export const Sidebar = styled.div`
   position: absolute;
   width: 300px;
   height: 100%;
-  background: ${props => props.theme[props.color] || props.theme.primary};
+  background: ${props => props.theme[props.color] || props.theme.light};
   transition: 0.5s;
 
   ul li {
     list-style: none;
-    color: ${props => props.theme[props.color] || props.theme.secondary};
+    color: ${props => props.theme[props.color] || props.theme.primary};
     font-size: 20px;
     padding: 20px 24px;
   }
