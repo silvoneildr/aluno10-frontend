@@ -12,24 +12,24 @@ const Header = React.memo(() => (
     <Main>
       <Sidebar />
       <Content>
-        <Card>
+        {/* <Card>
           <CardBody>
-            <h2>567</h2>
+            <p>567</p>
             <p>Students</p>
           </CardBody>
         </Card>
         <Card>
           <CardBody>
-            <h2>102</h2>
+            <p>102</p>
             <p>Subjects</p>
           </CardBody>
         </Card>
         <Card>
           <CardBody>
-            <h2>79</h2>
+            <p>79</p>
             <p>Classes</p>
           </CardBody>
-        </Card>
+        </Card> */}
       </Content>
     </Main>
   </Fragment>

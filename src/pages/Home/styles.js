@@ -25,8 +25,10 @@ export const Content = styled.div`
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  flex-direction: column;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+  align-items: stretch;
 `;
 
 export const CardGroup = styled.div`
@@ -50,6 +52,7 @@ export const Card = styled.div`
   color: ${props => props.theme.secondary};
   font-family: sans-serif;
   h2 p {
+    width: 100%;
     margin: 0;
     padding: 0;
   }

@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import { useSelector } from 'react-redux';
-import { Sidebar, ToggleBtn } from './styles';
+import { Sidebar, ToggleBtn, ItemMenu } from './styles';
 
 const SideBar = () => {
   const [leftValue, setLeft] = useState(-300);
@@ -24,11 +24,21 @@ const SideBar = () => {
           <span />
         </ToggleBtn>
         <ul>
-          <li>{sideBarMenuMessages.menuSideBarHome}</li>
-          <li>{sideBarMenuMessages.menuSideBarStudents}</li>
-          <li>{sideBarMenuMessages.menuSideBarSubjects}</li>
-          <li>{sideBarMenuMessages.menuSideBarClasses}</li>
-          <li>{sideBarMenuMessages.menuSideBarSetup}</li>
+          <ItemMenu>
+            <li>{sideBarMenuMessages.menuSideBarHome}</li>
+          </ItemMenu>
+          <ItemMenu>
+            <li>{sideBarMenuMessages.menuSideBarStudents}</li>
+          </ItemMenu>
+          <ItemMenu>
+            <li>{sideBarMenuMessages.menuSideBarSubjects}</li>
+          </ItemMenu>
+          <ItemMenu>
+            <li>{sideBarMenuMessages.menuSideBarClasses}</li>
+          </ItemMenu>
+          <ItemMenu>
+            <li>{sideBarMenuMessages.menuSideBarSetup}</li>
+          </ItemMenu>
         </ul>
       </Fragment>
     </Sidebar>
