@@ -11,6 +11,13 @@ describe('Store', () => {
           emailError: 'E-mail is required.',
           passwordError: 'Password is required.',
           buttonLogin: 'Login'
+        },
+        sideBar: {
+          menuSideBarClasses: 'Classes',
+          menuSideBarHome: 'Home',
+          menuSideBarSetup: 'Setup',
+          menuSideBarStudents: 'Students',
+          menuSideBarSubjects: 'Subjects'
         }
       }
     };
@@ -24,6 +31,13 @@ describe('Store', () => {
           emailError: 'E-mail is required.',
           passwordError: 'Password is required.',
           buttonLogin: 'Login'
+        },
+        sideBar: {
+          menuSideBarClasses: 'Classes',
+          menuSideBarHome: 'Home',
+          menuSideBarSetup: 'Setup',
+          menuSideBarStudents: 'Students',
+          menuSideBarSubjects: 'Subjects'
         }
       }
     });
